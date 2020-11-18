@@ -1,0 +1,50 @@
+
+
+p.user_title {
+  font-size: 30px;
+  color: yellow;
+  text-align: center;
+}
+
+.form_group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.nickname_form {
+  margin-top: 20px;
+}
+
+.email_form {
+  margin-top: 50px;
+}
+
+.form_text {
+  color: red;
+  font-size: 20px;
+}
+
+.input_box {
+  border-radius: 30px;
+  border: solid 1px black;
+  margin: 20px 20px;
+  width: 400px;
+  resize: none;
+}
+
+.submit_btn {
+  display: flex;
+  justify-content: center;
+}
+
+.user_btn {
+  margin-top: 50px;
+  border: solid 1px black;
+  border-radius: 30px;
+  font-size: 20px;
+  color: red;
+  background-color: orange;
+  padding: 10px;
+}
