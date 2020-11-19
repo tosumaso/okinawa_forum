@@ -1,5 +1,22 @@
 <%= render "shared/header"%>
 <div class="main">
-  <%= form_with%>
+  <div class="post_contents">
+    <h1 class="post_title">チャットルーム一覧</h1>
+  <div class="post_lists">
+    <% @posts.each do |post|%>
+      <li class="list">
+        <%= link_to ("#") do %>
+        <div class="post_name"><%= post.name %></div>
+        <div class="post_content"><%=post.content %></div>
+        <% end %>
+      </li>
+    <% end %>
+  </div>
+  </div>
 </div>
+<%if user_signed_in?%>
+<%= link_to(new_post_path, class: 'create_room') do %>
+    <p class="create_room_text">ポスト/ルーム作成</p>
+<% end %>
+<% end %>
 <%= render "shared/footer"%>
