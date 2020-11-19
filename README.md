@@ -57,29 +57,6 @@ has_one :memo
 belongs_to :user
 belongs_to :room
 
-## Post_Tag
-
-|column       |type        |options                          |
-|-------------|------------|---------------------------------|
-|tag          |references  |null: false, foreign_key: true   |
-|post         |references  |null: false, foreign_key: true   |
-
-## Associations
-
-belongs_to :post
-belongs_to :tag
-
-## Tag
-
-|column       |type        |options                          |
-|-------------|------------|---------------------------------|
-|name         |integer     |null: false                      |
-
-## Associations
-
-has_many :post_tags
-has_many :posts, through: post_tags
-
 ## Message
 
 |column       |type        |options                          |

@@ -1,0 +1,22 @@
+<%= render "shared/second_header"%>
+  
+  <%= form_with model: @post, url: posts_path, class: 'create_post', local: true do |f|%>
+  <div class="form_wrapper">
+    <p class="post_registration">ポスト作成</p>
+    <div class="form_group">
+      <div class="post_name_form">
+        <label class="form_text">ポスト名</label>
+      </div>
+      <%= f.text_area :name, class:"input_box", rows: 1, maxlength: 10, autofocus: true %>
+    </div>
+    <div class="form_group">
+      <div>
+        <label class="form_text">内容</label>
+      </div>
+      <%= f.text_area :content, class:"input_box", rows: 10, maxlength:200 %>
+    </div>
+    <div class="submit_btn">
+      <%= f.submit "作成", class: "create_btn"%>
+    </div>
+  </div>
+  <% end %>
