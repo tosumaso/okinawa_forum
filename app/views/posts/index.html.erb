@@ -4,12 +4,12 @@
     <h1 class="post_title">チャットルーム一覧</h1>
   <div class="post_lists">
     <% @posts.each do |post|%>
-      <li class="list">
-        <%= link_to ("#") do %>
+        <%= link_to (post_path(post)) do %>
+        <li class="post_list">
         <div class="post_name"><%= post.name %></div>
         <div class="post_content"><%=post.content %></div>
+        </li>
         <% end %>
-      </li>
     <% end %>
   </div>
   </div>
