@@ -1,0 +1,14 @@
+<%= render "shared/second_header"%>
+<div class="show_post_main">
+  <div class="show_post_table">
+    <div class="show_post_name">
+      <%= @post.name %>
+    </div>
+    <div class="show_post_content">
+      <%= @post.content%>
+    </div>
+  </div>
+</div>
+<div class= "room_create_link">
+    <%= link_to 'チャットルームを作成', "#"%>
+  </div>
