@@ -9,6 +9,14 @@
     </div>
   </div>
 </div>
-<div class= "room_create_link">
-    <%= link_to 'チャットルームを作成', "#"%>
+
+<% if @post.room.present? %>
+  <div class="room_link">
+    <%= link_to 'チャットルームへ入る', post_rooms_path(@post)%>
   </div>
+<% else %>
+  <div class= "room_link">
+    <%= link_to 'チャットルームを作成', new_post_room_path(@post)%>
+  </div>
+<% end %>
+
