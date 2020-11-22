@@ -1,0 +1,6 @@
+<h1>ルーム作成</h1>
+<%= form_with model:@room, url: post_rooms_path(@post), method: :post, local: true do |f|%>
+  <p>ルーム名</p>
+  <%= f.text_field :name, class: "room_create_name"%>
+  <%= f.submit "ルームを作成", class: "room_create_btn"%>
+<% end %>

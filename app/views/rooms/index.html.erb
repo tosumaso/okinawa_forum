@@ -1,0 +1,13 @@
+<h1>ルーム情報</h1>
+<%= @room.name%>
+<p><%= current_user.nickname%></p>
+<div id='messages'>
+  <% @messages.each do |message|%>
+    <p><%= message.content %></p>
+  <% end %>
+</div>
+
+<%= form_with model: @message, url: post_room_messages_path(@post,@room), method: :post, local: true do |f| %>
+  <%= f.text_field :content, class: "room_message" %>
+  <%= f.submit "送信", class: "room_message_send"%>
+<% end %>
