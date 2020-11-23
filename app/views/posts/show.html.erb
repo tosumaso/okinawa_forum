@@ -14,7 +14,7 @@
   <div class="room_link">
     <%= link_to 'チャットルームへ入る', post_rooms_path(@post)%>
   </div>
-<% else %>
+<% elsif current_user.id == @post.user_id %>
   <div class= "room_link">
     <%= link_to 'チャットルームを作成', new_post_room_path(@post)%>
   </div>

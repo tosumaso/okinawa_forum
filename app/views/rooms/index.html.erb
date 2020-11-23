@@ -3,7 +3,9 @@
 <p><%= current_user.nickname%></p>
 <div id='messages'>
   <% @messages.each do |message|%>
-    <p><%= message.content %></p>
+    <% if message.room.id == @room.id%>
+      <p><%= message.content %></p>
+    <% end %>
   <% end %>
 </div>
 
@@ -11,3 +13,14 @@
   <%= f.text_field :content, class: "room_message" %>
   <%= f.submit "送信", class: "room_message_send"%>
 <% end %>
+
+<div class="memo">
+  <input type="button" value="メモを開く" id="button_1">
+</div>
+  <script>
+  const immediate = () => {
+    window.open('rooms/memo', null, 'width=300,toolbar=yes,menubar=yes,scrollbars=yes');
+};
+
+document.getElementById('button_1').addEventListener('click', immediate);
+  </script>
