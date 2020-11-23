@@ -1,0 +1,18 @@
+<div class= memo>
+  <textarea rows="10" cols="40"></textarea>
+</div>
+<form action="#" name="direct_url">
+  <select name="select1" onchange="url_window();">
+    <option value="#">以下のページで意見を伝えよう! </option>
+    <option value="../../anime/index.html">アニメーション GIF </option>
+    <option value="../../hamu/index.html">ハムちゃんの部屋 </option>
+  </select>
+</form>
+<script>
+  function url_window() {
+	document.direct_url.select1.blur();
+	var num = document.direct_url.select1.selectedIndex;
+	var url = document.direct_url.select1.options[num].value;
+	window.open(url);
+}
+</script>
