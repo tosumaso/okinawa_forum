@@ -1,0 +1,23 @@
+<main class="main_memo">
+<div class="wrapper">
+  <div class= memo>
+    <textarea class="memo_textarea" cols="40"></textarea>
+  </div>
+<div class="pulldown_messages">
+  <p class="first_memo_message">熱い気持ちを伝えよう!</p>
+  <p class="second_memo_message">(誹謗中傷を含む内容は控えましょう)</p>
+</div>
+
+ <%= form_with url:"#",id: "direct_url", class: "url_pulldown", local: true do |f| %>
+  <%= f.collection_select(:url_id, Url.all, :id, :name, {}, {class: "url_select", onchange: 'url_window();'})%>
+ <% end %>
+ </div>
+
+<script>
+  function url_window() {
+    const form = document.getElementById("direct_url");
+    const url = form.url_id.value;
+    window.open(url);
+}
+</script>
+</main>
