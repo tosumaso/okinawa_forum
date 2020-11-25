@@ -14,13 +14,16 @@
   <%= f.submit "送信", class: "room_message_send"%>
 <% end %>
 
-<div class="memo">
-  <input type="button" value="メモを開く" id="button_1">
-</div>
+<%= form_with model: @memo, url: new_post_room_memo_path(@post,@room), method: :get, local: true do |f| %>
+  <%= f.submit "メモを開く", class: "memo_open", id:"memo_open"%>
+<% end %>
+
   <script>
-  const immediate = () => {
-    window.open('rooms/memo', null, 'width=300,toolbar=yes,menubar=yes,scrollbars=yes');
+  const immediate = (e) => {
+    window.open('http://localhost:3000/posts/1/rooms/1/memos/new?commit=%E3%83%A1%E3%83%A2%E3%82%92%E9%96%8B%E3%81%8F', null, 'width=600,height=500,toolbar=yes,menubar=yes,scrollbars=yes');
+    e.preventDefault();
 };
 
-document.getElementById('button_1').addEventListener('click', immediate);
+document.getElementById('memo_open').addEventListener('click', immediate);
+
   </script>

@@ -1,0 +1,44 @@
+.main_memo {
+  height: 100vh;
+  background-color: #486d46;            
+  background-image: url("home_page_material.png"); 
+  background-size: cover;               
+  background-attachment: fixed;         
+  background-position: center center; 
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.memo {
+  margin: 20px 40px;
+}
+
+.memo_textarea {
+  width: 80vw;
+  height:70vh;
+  border-radius: 10px;
+  border: 2px solid #000000;
+}
+
+.pulldown_messages {
+  text-align: center;
+}
+
+.first_memo_message {
+  color:#EE0000;
+}
+
+.url_select {
+  width: 150px;
+  height: 30px;
+  border: 1px solid #000000;
+  border-radius: 20px;
+  background-color: #999999;
+  color: #000000;
+  font-size: 20px;
+}
