@@ -1,6 +1,9 @@
 class Url < ActiveHash::Base
   self.data= [
     {id: "#", name: '------------------'},
+    {id: "https://twitter.com/home?lang=ja", name: 'Twitter'},
+    {id: "https://ja-jp.facebook.com/", name: 'Facebook'},
+    {id: "https://www.instagram.com/?hl=ja", name: 'Instagram'},
     {id: "https://www.pref.okinawa.jp/otoiawase.html", name: '沖縄県庁' },
     {id: "https://www.info.city.naha.okinawa.jp/index.html", name: '那覇市役所'},
     {id: "https://www.city.okinawa.okinawa.jp/inquiry/", name: '沖縄市役所'},

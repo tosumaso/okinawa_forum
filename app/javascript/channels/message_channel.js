@@ -2,7 +2,7 @@ import consumer from "./consumer"
 
 consumer.subscriptions.create("MessageChannel", {
   connected() {
-    // Called when the subscription is ready for use on the server
+   
   },
 
   disconnected() {
@@ -10,7 +10,14 @@ consumer.subscriptions.create("MessageChannel", {
   },
 
   received(data) {
-    const html= `<p>${data.text.content}</p>`;
+    const html=    
+    `<div class="message_block">
+    <div class="message_top">
+      <div class="message_nickname">${data.user}</div>
+      <div class="jp_time">${data.time}</div>
+    </div>
+    <p class="message">${data.text.content}</p>
+    </div>`;
     const messages = document.getElementById('messages');
     const newMessage = document.getElementById('message_content');
     messages.insertAdjacentHTML('beforeend', html);

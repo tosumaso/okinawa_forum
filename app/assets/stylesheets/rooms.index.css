@@ -1,0 +1,149 @@
+.room_header {
+  padding-top: 15px;
+  height: 150px;
+  background-image: url("home_page_material.png"); 
+  background-size: auto;
+  background-attachment: fixed;         
+  background-position: center; 
+}
+
+.main_message {
+  min-height: 100vh;            
+  background-image: url("message_page_material.png"); 
+  background-size: cover;               
+  background-attachment: fixed;         
+  background-position: center; 
+  padding-top: 15px;
+  position: relative;
+
+}
+
+.room_name {
+  text-align: center;
+  font-size: 40px;
+  color: #FFFF00;
+}
+
+.room_information {
+  display:flex;
+  justify-content: flex-end;
+}
+
+.your_name {
+  border: solid 1px blue;
+  color: #000000;
+  font-size: 20px;
+  background-color:#99CCFF;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.your_name:hover {
+  background-color: #00FFFF;
+  color: #FFFFFF;
+}
+
+.back_to_main {
+  border: solid 1px blue;
+  color: #000000;
+  font-size: 20px;
+  background-color:	#99CCFF;
+  margin: 10px 30px 10px 10px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.back_to_main:hover{
+  background-color: #00FFFF;
+  color: #FFFFFF;
+}
+
+.back_to_color{
+  color: #000000;
+}
+
+.back_to_color:hover {
+  color: #FFFFFF;
+}
+
+.message_block {
+  border: 1px dashed #000000;
+  margin: 30px 100px 0px;
+  background-color: #99CCFF;
+  border-radius: 10px;
+  
+}
+
+.message_top {
+  display: flex;
+
+}
+
+.message_nickname {
+  padding: 5px;
+}
+
+.jp_time {
+  padding: 5px 5px 5px 10px;
+}
+
+.message {
+  padding: 0px 10px 0px; 
+}
+
+.messages {
+  padding-bottom: 20px;
+}
+
+.message_form {
+  display: flex;
+  position: absolute;
+  bottom: 30px;
+  right: 20px;
+  position: fixed;
+}
+
+.mid_message_form {
+  display:flex;
+}
+
+.room_message {
+  font-size: 20px;
+  height: 60px;
+  width: 40vw;
+  margin: 10px 0px;
+  transition: 0.3s;
+	letter-spacing: 1px;
+	border: 1px solid #1b2538;
+	border-radius: 4px;
+}
+
+.room_message:focus {
+  border: 1px solid #FF0000;
+  outline: none;
+}
+
+.room_message_send {
+  height: 60px;
+  width: 60px;
+  margin: 10px 20px;
+  
+}
+
+.room_message_send:hover{
+  background-color: #00FFFF;
+  color: white;
+}
+
+.memo_open {
+  height:60px;
+  margin: 10px 15px 10px 0px;
+  padding: 10px;
+  
+}
+
+.memo_open:hover {
+  background-color: #00FFFF;
+  color: #FFFFFF;
+}

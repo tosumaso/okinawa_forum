@@ -6,6 +6,10 @@ header {
   height:150px;
 }
 
+p {
+  white-space: pre-wrap;
+}
+
 li {
   list-style: none;
 }
@@ -71,6 +75,7 @@ textarea {
 .main {
   min-height: calc(100vh - 100px);
   padding-bottom: 150px;
+  background: linear-gradient(-100deg,#86F9C5, #CEF9DC) fixed;
 }
 
 .post_contents {
@@ -82,6 +87,7 @@ textarea {
 .post_title {
   font-size:30px;
   color: yellow;
+  border-bottom: 1px solid #000000;
 }
 
 .post_lists {
@@ -97,6 +103,7 @@ textarea {
   margin: 2vh;
   width: 50vw;
   height: 25vh;
+  background-color: #FFFFFF;
 }
 
 .post_name {

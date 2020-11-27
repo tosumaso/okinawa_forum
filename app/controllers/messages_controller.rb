@@ -5,7 +5,8 @@ class MessagesController < ApplicationController
     @room = Room.find(params[:room_id])
     @message = @room.messages.new(params_message)
     if @message.save
-      ActionCable.server.broadcast 'message_channel', text: @message
+      ja_time = l @message.created_at
+      ActionCable.server.broadcast 'message_channel', text: @message, user: current_user.nickname, time: ja_time
     end
   end
 

@@ -1,0 +1,9 @@
+<header class="header">
+<div class="room_header">
+  <p class="room_name"><%= @room.name%></p>
+  <div class="room_information">
+    <p class="your_name"><%= "#{current_user.nickname}さん"%></p>
+    <p class="back_to_main"><%= link_to "メインページへ戻る", root_path, class:"back_to_color" %></p>
+  </div>
+</div>
+</header>
