@@ -1,29 +1,37 @@
-<h1>ルーム情報</h1>
-<%= @room.name%>
-<p><%= current_user.nickname%></p>
-<div id='messages'>
+<%= render "shared/third_header"%>
+<main class="main_message">
+<div class='messages', id="messages">
   <% @messages.each do |message|%>
     <% if message.room.id == @room.id%>
-      <p><%= message.content %></p>
+    <div class="message_block">
+      <div class="message_top">
+        <div class="message_nickname"><%= current_user.nickname %></div>
+        <div class="jp_time"><%= l message.created_at %></div>
+      </div>
+      <p class="message"><%= message.content %></p>
+    </div>
     <% end %>
   <% end %>
 </div>
 
-<%= form_with model: @message, url: post_room_messages_path(@post,@room), method: :post, local: true do |f| %>
-  <%= f.text_field :content, class: "room_message" %>
+<div class="message_form">
+<%= form_with model: @message, url: post_room_messages_path(@post,@room), method: :post, class: "mid_message_form", local: true do |f| %>
+  <%= f.text_area :content, class: "room_message", placeholder: "メッセージを投稿しよう" %>
   <%= f.submit "送信", class: "room_message_send"%>
 <% end %>
 
 <%= form_with model: @memo, url: new_post_room_memo_path(@post,@room), method: :get, local: true do |f| %>
   <%= f.submit "メモを開く", class: "memo_open", id:"memo_open"%>
 <% end %>
+</div>
 
-  <script>
+</main>
+
+
+<script>
   const immediate = (e) => {
     window.open('http://localhost:3000/posts/1/rooms/1/memos/new?commit=%E3%83%A1%E3%83%A2%E3%82%92%E9%96%8B%E3%81%8F', null, 'width=600,height=500,toolbar=yes,menubar=yes,scrollbars=yes');
     e.preventDefault();
-};
-
-document.getElementById('memo_open').addEventListener('click', immediate);
-
-  </script>
+  };
+  document.getElementById('memo_open').addEventListener('click', immediate);
+</script>
