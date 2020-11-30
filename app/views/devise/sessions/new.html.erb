@@ -1,8 +1,11 @@
 <%= render "shared/second_header"%>
-  
+<div class="main_login"> 
 <%= form_with model: @user, url: user_session_path, class: 'registration-main', local: true do |f|%>
   <div class="form_wrapper">
     <p class="user_title">ユーザーログイン</p>
+
+    <p class="login_errors"><%= flash[:alert]%></p>
+
     <div class="form_group">
       <div class="email_form">
         <label class="form_text" for="user_email">メールアドレス</label>
@@ -20,4 +23,6 @@
     </div>
   </div>
   <% end %>
+</div>
+<%= render "shared/footer"%>
 

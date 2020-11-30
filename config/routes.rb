@@ -7,4 +7,5 @@ Rails.application.routes.draw do
       resources :memos, only: [:new]
     end
   end
+  resources :users, only: [:edit, :update]
 end

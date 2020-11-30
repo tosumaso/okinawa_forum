@@ -19,7 +19,6 @@
   <%= f.text_area :content, class: "room_message", placeholder: "メッセージを投稿しよう" %>
   <%= f.submit "送信", class: "room_message_send"%>
 <% end %>
-
 <%= form_with model: @memo, url: new_post_room_memo_path(@post,@room), method: :get, local: true do |f| %>
   <%= f.submit "メモを開く", class: "memo_open", id:"memo_open"%>
 <% end %>

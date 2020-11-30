@@ -2,6 +2,7 @@
 <div class="main">
   <div class="post_contents">
     <h1 class="post_title">チャットルーム一覧</h1>
+
   <div class="post_lists">
     <% @posts.each do |post|%>
         <%= link_to (post_path(post)) do %>
@@ -16,7 +17,7 @@
 </div>
 <%if user_signed_in?%>
 <%= link_to(new_post_path, class: 'create_room') do %>
-    <p class="create_room_text">ポスト/ルーム作成</p>
+    <p class="create_room_text">ポスト作成</p>
 <% end %>
 <% end %>
 <%= render "shared/footer"%>
