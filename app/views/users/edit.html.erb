@@ -1,11 +1,8 @@
 <%= render "shared/second_header"%>
 <div class="main">
-<%= form_with model: @user, url: user_registration_path, class: 'registration-main', local: true do |f|%>
+<%= form_with model: @user, url: user_path(params[:id]), method: :put, class: 'registration-main', local: true do |f|%>
   
-    <p class="user_title">ユーザー新規登録</p>
-
-  <%= render partial: 'shared/error_messages', locals: {model: @user}%>
-
+    <p class="user_title">ユーザー情報変更</p>
     <div class="form_group">
       <div class="nickname_form">
         <label class="form_text">ニックネーム(10文字以内)</label>
@@ -24,14 +21,8 @@
       </div>
       <%= f.password_field :password, class:"input_box"%>
     </div>
-    <div class="form_group">
-      <div class="password_form">
-        <label class="form_text">パスワード(確認用)</label>
-      </div>
-      <%= f.password_field :password_confirmation, class:"input_box"%>
-    </div>
     <div class="submit_btn">
-      <%= f.submit "登録", class: "user_btn"%>
+      <%= f.submit "変更", class: "user_btn"%>
     </div>
   <% end %>
 </div>
