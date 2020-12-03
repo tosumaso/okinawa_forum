@@ -2,7 +2,7 @@ class RoomsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @post =Post.find(params[:post_id])
+    post_params
     @room = @post.room
     @message = Message.new
     @messages = Message.all
@@ -10,10 +10,11 @@ class RoomsController < ApplicationController
 
   def new
     @room = Room.new
-    @post = Post.find(params[:post_id])
+    post_params
   end
 
   def create
+    post_params
     @room = Room.new(params_room)
     if @room.save
       redirect_to root_path
@@ -26,5 +27,9 @@ class RoomsController < ApplicationController
 
   def params_room
     params.require(:room).permit(:name).merge(post_id: params[:post_id])
+  end
+
+  def post_params
+    @post = Post.find(params[:post_id])
   end
 end

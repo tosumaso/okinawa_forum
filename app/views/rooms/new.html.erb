@@ -1,6 +1,21 @@
-<h1>ルーム作成</h1>
-<%= form_with model:@room, url: post_rooms_path(@post), method: :post, local: true do |f|%>
-  <p>ルーム名</p>
-  <%= f.text_field :name, class: "room_create_name"%>
-  <%= f.submit "ルームを作成", class: "room_create_btn"%>
+<%= render "shared/second_header"%>
+<div class="main">
+
+<%= form_with model: @room, url: post_rooms_path(@post), class: "creating_room", method: :post, local: true do |f|%>
+<p class="room_registration">ルーム作成</p>
+  <div class="form_group">
+
+    <%= render partial: 'shared/error_messages', locals: {model: @room}%>
+
+    <div class="post_name_form">
+      <label class="form_text">ルーム名</label>
+    </div>
+    <%= f.text_area :name, class:"input_box", rows: 1, maxlength: 10, autofocus: true %>
+  </div>
+
+  <div class="room_submit_btn">
+    <%= f.submit "作成", class: "create_btn"%>
+  </div>
 <% end %>
+</div>
+<%= render "shared/footer" %>
