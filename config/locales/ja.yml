@@ -34,7 +34,9 @@ ja:
         remember_me: "次回から自動的にログイン"
       post: 
         name: 名前
-        content: 本文 
+        content: 本文
+      room:
+        name: 名前 
     models:
       user: "ユーザ"
     confirmations:
@@ -96,3 +98,5 @@ ja:
   devise:
     failure:
       invalid: "%{authentication_keys} もしくはパスワードが違います。"
+      user:
+        unauthenticated: "ログインしてください"

@@ -23,8 +23,7 @@
 .access_btn {
   position: absolute;
   bottom: 30px;
-  right: 30px;
-  
+  right: 0; 
 }
 
 .user_info {
@@ -32,7 +31,6 @@
 }
 
 .user_nickname, .user_registration {
-  margin: 30px;
   padding: 10px 20px;
   border: solid 1px blue;
   color: #000000;
@@ -64,20 +62,68 @@
 .main {
   height: 100%;
   min-height: 100%;
-  padding-bottom: 150px;
+  height:auto !important;
+  padding-bottom: 100px;
   background: linear-gradient(-100deg,#86F9C5, #CEF9DC) fixed;
+  position:relative;
+}
+
+.how_to_use {
+  position: absolute;
+  left: 0px;
+  top: 100px;
+  border: 1px solid #C0C0C0;
+  width: 20vw;
+  margin-left: 20px;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+}
+
+.how_title {
+  font-size: 25px;
+  text-align: center;
+  padding: 15px 0px 20px;
+}
+
+.how_1, .how_2, .how_3 {
+  font-size: 20px;
+  text-align: center;
+  padding: 0px 5px 60px;
 }
 
 .post_contents {
   display:flex;
+  min-height: 70vh;
   flex-direction: column;
   align-items: center;
 }
 
 .post_title {
   font-size:30px;
-  color: yellow;
+  color: #000000;
   border-bottom: 1px solid #000000;
+}
+
+.search_form {
+  padding-top: 5px;
+}
+
+.search_input {
+  border-radius: 10px;
+  width: 15vw;
+}
+
+.search_btn {
+  border: solid 1px blue;
+  color: #000000;
+  font-size: 20px;
+  background-color:	#99CCFF;
+  border-radius: 5px;
+}
+
+.search_btn:hover {
+  background-color: #00FFFF;
+  color: #FFFFFF;
 }
 
 .post_lists {

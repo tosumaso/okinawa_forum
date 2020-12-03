@@ -1,16 +1,11 @@
-<%= render "shared/header"%>
+
 <div class="main">
-  <div class="how_to_use">
-    <p class="how_title">沖縄フォーラムの使い方</p>
-    <p class="how_1">1. 自分の話したい内容についてポストを作成しよう</p>
-    <p class="how_2">2. ポスト作成者は自身のポスト画面でルームを作成しよう</p>
-    <p class="how_3">3. マナーを守って発言しよう!</p>
-  </div>
+<%= render "shared/header"%>
   <div class="post_contents">
     <h1 class="post_title">チャットルーム一覧</h1>
 
     <%= form_with(url: search_posts_path, local: true, method: :get, class: "search_form") do |form| %>
-      <%= form.text_field :keyword, placeholder: "投稿を検索する", class: "search_input"%>
+      <%= form.text_field :keyword, placeholder: "ポストを検索する", class: "search_input"%>
       <%= form.submit "検索", class: "search_btn"%>
     <% end %>
 
