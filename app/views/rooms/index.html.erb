@@ -5,7 +5,7 @@
     <% if message.room.id == @room.id%>
     <div class="message_block">
       <div class="message_top">
-        <div class="message_nickname"><%= current_user.nickname %></div>
+        <div class="message_nickname"><%= message.user.nickname %></div>
         <div class="jp_time"><%= l message.created_at %></div>
       </div>
       <p class="message"><%= message.content %></p>

@@ -1,10 +1,11 @@
 .room_header {
   padding-top: 15px;
   height: 150px;
-  background-image: url("home_page_material.png"); 
-  background-size: auto;
+  background-image: url("home_page_material3.png"); 
+  background-size: cover;
   background-attachment: fixed;         
-  background-position: center; 
+  background-repeat: no-repeat;
+
 }
 
 .main_message {
@@ -21,7 +22,7 @@
 .room_name {
   text-align: center;
   font-size: 40px;
-  color: #FFFF00;
+  color: #000000;
 }
 
 .room_information {

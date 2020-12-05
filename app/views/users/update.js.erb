@@ -1,0 +1,3 @@
+const error = document.getElementById('comments_error');
+const HTML = `<%= render partial: 'shared/error_messages', locals: {model: @user}%>`;
+error.insertAdjacentHTML("beforeend", HTML);

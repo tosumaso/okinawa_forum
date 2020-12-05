@@ -96,6 +96,12 @@ p.user_title {
   color: #FFFFFF;
 }
 
+.create_post_message {
+  font-size: 20px;
+  text-align: center;
+  color: red;
+}
+
 /* ルーム作成*/
 .creating_room {
   height: 500px;
@@ -103,7 +109,7 @@ p.user_title {
 
 .room_registration {
   font-size: 30px;
-  color: yellow;
+  color: red;
   text-align: center;
 }
 

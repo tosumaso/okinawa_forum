@@ -1,11 +1,13 @@
 <%= render "shared/second_header"%>
 <div class="main">
 
-<%= form_with model: @room, url: post_rooms_path(@post), class: "creating_room", method: :post, local: true do |f|%>
+<%= form_with model: @room, url: post_rooms_path(@post), class: "creating_room", method: :post, id: "creating_room" do |f|%>
 <p class="room_registration">ルーム作成</p>
   <div class="form_group">
 
+  <div id="comments_error">
     <%= render partial: 'shared/error_messages', locals: {model: @room}%>
+  </div>
 
     <div class="post_name_form">
       <label class="form_text">ルーム名</label>

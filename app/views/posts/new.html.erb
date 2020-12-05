@@ -1,11 +1,13 @@
 <%= render "shared/second_header"%>
 <div class="main">
-  <%= form_with model: @post, url: posts_path, class: 'create_post', local: true do |f|%>
-  
+  <%= form_with model: @post, url: posts_path, class: 'create_post', id: 'create_post' do |f|%>
+
     <p class="post_registration">ポスト作成</p>
     <div class="form_group">
-
+    
+    <div id="comments_error">
       <%= render partial: 'shared/error_messages', locals: {model: @post}%>
+    </div>
 
       <div class="post_name_form">
         <label class="form_text">ポスト名</label>
@@ -19,7 +21,7 @@
       <%= f.text_area :content, class:"input_box", rows: 10, maxlength:200 %>
     </div>
     <div class="submit_btn">
-      <%= f.submit "作成", class: "create_btn"%>
+      <%= f.submit "作成", class: "create_btn", id: "create_btn"%>
     </div>
 
   <% end %>
