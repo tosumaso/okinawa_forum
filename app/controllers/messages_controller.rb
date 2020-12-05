@@ -7,7 +7,7 @@ class MessagesController < ApplicationController
     @message = @room.messages.new(params_message)
     if @message.save
       ja_time = l @message.created_at
-      ActionCable.server.broadcast 'message_channel', text: @message, user: current_user.nickname, time: ja_time
+      ActionCable.server.broadcast 'message_channel', text: @message, user: @message.user.nickname, time: ja_time
     end
   end
 

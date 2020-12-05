@@ -16,10 +16,12 @@ class RoomsController < ApplicationController
   def create
     post_params
     @room = Room.new(params_room)
+    respond_to do |format|
     if @room.save
-      redirect_to root_path
+      format.js {render template: "posts/index.js.erb"}
     else
-      render action: :new
+      format.js {render 'create'}
+    end
     end
   end
 

@@ -11,11 +11,13 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
+    respond_to do |format|
     if @post.save
-      redirect_to root_path
+      format.js {render :index}
     else
-      render action: :new
+      format.js {render 'create'}
     end
+  end
   end
 
   def show
