@@ -4,5 +4,5 @@ class Room < ApplicationRecord
   has_many :messages
   has_one :memo
 
-  validates :name, presence: true
+  validates :name, presence: true, length: {maximum: 20}
 end

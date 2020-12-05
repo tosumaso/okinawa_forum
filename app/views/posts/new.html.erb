@@ -12,15 +12,15 @@
       <div class="post_name_form">
         <label class="form_text">ポスト名</label>
       </div>
-      <%= f.text_area :name, class:"input_box", rows: 1, maxlength: 10, autofocus: true %>
+      <%= f.text_area :name, class:"input_box", rows: 1, autofocus: true %>
     </div>
     <div class="form_group">
       <div>
         <label class="form_text">内容</label>
       </div>
-      <%= f.text_area :content, class:"input_box", rows: 10, maxlength:200 %>
+      <%= f.text_area :content, class:"input_box", rows: 10 %>
     </div>
-    <div class="submit_btn">
+    <div class="submit_btn" >
       <%= f.submit "作成", class: "create_btn", id: "create_btn"%>
     </div>
 
