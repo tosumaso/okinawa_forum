@@ -10,7 +10,7 @@
       <div class="nickname_form">
         <label class="form_text">ニックネーム(10文字以内)</label>
       </div>
-      <%= f.text_area :nickname, class:"input_box", rows: 1, maxlength: 10, autofocus: true %>
+      <%= f.text_area :nickname, class:"input_box", rows: 1, autofocus: true %>
     </div>
     <div class="form_group">
       <div>
@@ -20,7 +20,7 @@
     </div>
     <div class="form_group">
       <div class="password_form">
-        <label class="form_text">パスワード</label>
+        <label class="form_text">パスワード(英数字含む6文字以上)</label>
       </div>
       <%= f.password_field :password, class:"input_box"%>
     </div>
